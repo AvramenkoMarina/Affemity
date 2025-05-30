@@ -39,6 +39,15 @@
 		background-color: #e8e6ef;
 		padding: 1rem;
 		color: #b7b4c1;
+
+		&:focus {
+			color: #111111;
+			outline: none;
+		}
+	}
+
+	&__inputError {
+		outline: 1px solid red;
 	}
 
 	&__button {

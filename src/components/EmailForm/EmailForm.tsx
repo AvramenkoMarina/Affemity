@@ -1,27 +1,49 @@
+import { useState, useRef } from 'react'
+import debounce from 'lodash.debounce'
 import logo from '../../assets/logo.svg'
 import privacy from '../../assets/Group.svg'
 import styles from './EmailForm.module.scss'
-import { useState } from 'react'
 
 const EmailForm = () => {
 	const [email, setEmail] = useState<string>('')
+	const [error, setError] = useState<boolean>(false)
+
+	const validateEmail = (value: string) => {
+		const trimmed = value.trim()
+
+		if (!trimmed) {
+			setError(true)
+		} else if (!trimmed.includes('@')) {
+			setError(true)
+		} else {
+			setError(false)
+		}
+	}
+
+	const debouncedValidate = useRef(
+		debounce((value: string) => {
+			validateEmail(value)
+		}, 500)
+	)
 
 	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEmail(event.target.value)
+		const value = event.target.value
+		setEmail(value)
+		debouncedValidate.current(value)
 	}
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-
 		const trimmedEmail = email.trim()
 
-		if (!trimmedEmail) {
-			alert('Будь ласка, введіть ваш email для отримання результатів.')
+		if (!trimmedEmail || error) {
+			alert('Будь ласка, введіть коректний email для отримання результатів.')
 			return
 		}
-		alert(`Дякуємо! Ваш email: ${trimmedEmail} відправлено.`)
 
+		alert(`Дякуємо! Ваш email: ${trimmedEmail} відправлено.`)
 		setEmail('')
+		setError(false)
 	}
 
 	return (
@@ -31,19 +53,22 @@ const EmailForm = () => {
 			<p className={styles.emailForm__description}>
 				Please enter your email to see results
 			</p>
+
 			<form onSubmit={handleSubmit} className={styles.emailForm__form}>
 				<input
 					type='email'
 					placeholder='example@gmail.com'
-					className={styles.emailForm__input}
+					className={`${styles.emailForm__input} ${
+						error ? styles.emailForm__inputError : ''
+					}`}
 					value={email}
 					onChange={handleEmailChange}
-					required
 				/>
+
 				<button
 					type='submit'
 					className={styles.emailForm__button}
-					disabled={!email.trim()}
+					disabled={!email.trim() || error}
 				>
 					Get results
 				</button>
