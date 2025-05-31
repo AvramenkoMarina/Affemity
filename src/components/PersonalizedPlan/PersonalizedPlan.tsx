@@ -22,7 +22,7 @@ const questions = [
 
 const images = [review1, review2, review3]
 
-const PersonalozedPlan = () => {
+const PersonalizedPlan = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [step, setStep] = useState(0) // від 0 до 3 (4 кроки)
   const [filled, setFilled] = useState(0) // прогресбар від 0 до 100
@@ -149,4 +149,4 @@ const PersonalozedPlan = () => {
   )
 }
 
-export default PersonalozedPlan
+export default PersonalizedPlan

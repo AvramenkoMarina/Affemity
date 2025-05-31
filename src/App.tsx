@@ -10,7 +10,7 @@ import { SkillSelectionStep } from './components/SkillSelection/SkillSelection'
 import './App.scss'
 import { SkillSelectionStepTwo } from './components/SkillSelectionStepTwo/SkillSelectionStepTwo'
 import EmailForm from './components/EmailForm/EmailForm'
-import PersonalozedPlan from './components/PersonalozedPlan/PersonalizedPlan'
+import PersonalizedPlan from './components/PersonalizedPlan/PersonalizedPlan'
 
 function App() {
   const [goal, setGoal] = useState<'goal1' | 'goal2' | null>(null)
@@ -36,7 +36,7 @@ function App() {
               <Route path="/goal1" element={<SkillSelectionStep />} />
               <Route path="/goal2" element={<SkillSelectionStepTwo />} />
               <Route path="/email" element={<EmailForm />} />
-              <Route path="/plan" element={<PersonalozedPlan />} />
+              <Route path="/plan" element={<PersonalizedPlan />} />
             </Routes>
           </div>
         </div>
