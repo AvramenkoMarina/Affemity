@@ -1,4 +1,4 @@
-import styles from './PersonalozedPlan.module.scss'
+import styles from './PersonalizedPlan.module.scss'
 import logo from '../../assets/logo.svg'
 import review1 from '../../assets/review1.svg'
 import review2 from '../../assets/review2.svg'
