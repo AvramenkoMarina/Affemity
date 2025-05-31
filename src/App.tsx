@@ -10,37 +10,39 @@ import { SkillSelectionStep } from './components/SkillSelection/SkillSelection'
 import './App.scss'
 import { SkillSelectionStepTwo } from './components/SkillSelectionStepTwo/SkillSelectionStepTwo'
 import EmailForm from './components/EmailForm/EmailForm'
+import PersonalozedPlan from './components/PersonalozedPlan/PersonalizedPlan'
 
 function App() {
-	const [goal, setGoal] = useState<'goal1' | 'goal2' | null>(null)
+  const [goal, setGoal] = useState<'goal1' | 'goal2' | null>(null)
 
-	return (
-		<GoalContext.Provider value={{ goal, setGoal }}>
-			<BrowserRouter>
-				<div className='app'>
-					<div className='container'>
-						<Routes>
-							<Route
-								path='/'
-								element={
-									<div className='app-wrapper'>
-										<Header />
-										<main className='main-content'>
-											<Main />
-										</main>
-										<Footer />
-									</div>
-								}
-							/>
-							<Route path='/goal1' element={<SkillSelectionStep />} />
-							<Route path='/goal2' element={<SkillSelectionStepTwo />} />
-							<Route path='/email' element={<EmailForm />} />
-						</Routes>
-					</div>
-				</div>
-			</BrowserRouter>
-		</GoalContext.Provider>
-	)
+  return (
+    <GoalContext.Provider value={{ goal, setGoal }}>
+      <BrowserRouter>
+        <div className="app">
+          <div className="container">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <div className="app-wrapper">
+                    <Header />
+                    <main className="main-content">
+                      <Main />
+                    </main>
+                    <Footer />
+                  </div>
+                }
+              />
+              <Route path="/goal1" element={<SkillSelectionStep />} />
+              <Route path="/goal2" element={<SkillSelectionStepTwo />} />
+              <Route path="/email" element={<EmailForm />} />
+              <Route path="/plan" element={<PersonalozedPlan />} />
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
+    </GoalContext.Provider>
+  )
 }
 
 export default App
