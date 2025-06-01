@@ -1,4 +1,4 @@
-import './Chart.css'
+import './Graphics.css'
 import type { ImplicitLabelType } from 'recharts/types/component/Label'
 import { ComposedChart, Line, Bar, CartesianGrid, ResponsiveContainer, XAxis } from 'recharts'
 import type { LineDot } from 'recharts/types/cartesian/Line'
@@ -38,29 +38,29 @@ type CustomLabelProps = {
 const CustomLabel: React.FC<CustomLabelProps> = ({ x = 0, y = 0, width = 0, index = 0 }) => {
   const windowInnerWidth = window.innerWidth
 
-  let labelWidth = 45
-  let labelHeight = 28
-  let yValueFirst = y - labelHeight - 15
-  let yValueSecond = y - labelHeight - 10
+  let labelWidth = 41
+  let labelHeight = 27
+  let yValueFirst = y - labelHeight - 20
+  let yValueSecond = y - labelHeight - 15
 
   if (windowInnerWidth > 480) {
     labelWidth = 60
     labelHeight = 38
-    yValueFirst = y - labelHeight - 25
-    yValueSecond = y - labelHeight - 20
+    yValueFirst = y - labelHeight - 20
+    yValueSecond = y - labelHeight - 15
   }
 
   if (index === 0) {
     return (
       <g>
         <foreignObject
-          x={x + width / 2 - labelWidth / 2}
+          x={x + width - labelWidth}
           y={yValueFirst}
           width={labelWidth}
           height={labelHeight}
-          className="chart__label"
+          className="graphics__label"
         >
-          <div className="chart__label-text">You</div>
+          <div className="graphics__label-text">You</div>
         </foreignObject>
       </g>
     )
@@ -70,13 +70,13 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ x = 0, y = 0, width = 0, inde
     return (
       <g>
         <foreignObject
-          x={x + width / 2 - labelWidth / 2}
+          x={x + width - labelWidth}
           y={yValueSecond}
           width={labelWidth}
           height={labelHeight}
-          className="chart__label"
+          className="graphics__label"
         >
-          <div className="chart__label-text">Goal</div>
+          <div className="graphics__label-text">Goal</div>
         </foreignObject>
       </g>
     )
@@ -91,16 +91,16 @@ type CustomXAxisLabelProps = {
 
 const CustomXAxisLabel: React.FC<CustomXAxisLabelProps> = ({ x = 0, y = 0, payload }) => {
   return (
-    <text x={x} y={y + 10} textAnchor="middle" fill="#111111" className="chart__xaxis">
+    <text x={x} y={y + 20} textAnchor="middle" fill="#111111" className="graphics__xaxis">
       {payload.value}
     </text>
   )
 }
 
-export const Chart = () => {
+export const Graphics = () => {
   return (
-    <div className="chart">
-      <span className="chart__text">Take a quiz to get a personalized plan</span>
+    <div className="graphics">
+      <span className="graphics__text">Take a quiz to get a personalized plan</span>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data}>
           <CartesianGrid stroke="#D2CFDF" vertical={false} horizontalValues={[250, 500, 750]} />

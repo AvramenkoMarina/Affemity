@@ -1,4 +1,4 @@
-.back {
+.back-button {
   display: block;
   width: 4rem;
   height: 4rem;
@@ -13,10 +13,10 @@
   transition: all 0.3s linear;
 }
 
-.back:hover {
+.back-button:hover {
   background-color: var(--border-color);
 }
 
-.back__icon {
+.back-button__icon {
   width: 1.2rem;
 }

@@ -4,7 +4,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { WelcomePage } from './pages/WelcomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { TestPage } from './pages/TestPage'
-import { ResultsPage } from './pages/ResultsPage'
+import { PersonlizedPlan } from './pages/PersonlizedPlan/index.tsx'
 import { ConfirmationPage } from './pages/ConfirmationPage'
 import { GoalProvider } from './context/GoalProvider.tsx'
 
@@ -19,7 +19,7 @@ export const Root = () => {
               <Route path="home" element={<Navigate to="/" replace />} />
               <Route path="test" element={<TestPage />} />
               <Route path="confirmation" element={<ConfirmationPage />} />
-              <Route path="results" element={<ResultsPage />} />
+              <Route path="results" element={<PersonlizedPlan />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>

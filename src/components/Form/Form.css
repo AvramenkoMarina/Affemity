@@ -1,16 +1,16 @@
-.confirmation-form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.confirmation-form__input {
+.form__input {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.confirmation-form__input-field {
+.form__input-field {
   font-family: inherit;
   font-weight: 300;
   font-size: 1.6rem;
@@ -22,28 +22,28 @@
   border-radius: 1rem;
 }
 
-.confirmation-form__input-field::placeholder {
+.form__input-field::placeholder {
   color: var(--text-disabled);
 }
 
-.confirmation-form__input-field:focus {
+.form__input-field:focus {
   background-color: var(--bg-light);
   border: 0.1rem solid var(--accent-color);
 }
 
-.confirmation-form__input-field:not(:placeholder-shown) {
+.form__input-field:not(:placeholder-shown) {
   background-color: var(--bg-light);
 }
 
-.confirmation-form__input-field--has-error {
+.form__input-field--has-error {
   border: 0.1rem solid var(--error-color);
 }
 
-.confirmation-form__input-field--has-error:focus {
+.form__input-field--has-error:focus {
   border: 0.1rem solid var(--error-color);
 }
 
-.confirmation-form__input-error {
+.form__input-error {
   font-weight: 700;
   font-size: 1rem;
   line-height: 120%;

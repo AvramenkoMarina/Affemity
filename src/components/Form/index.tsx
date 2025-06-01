@@ -1,2 +1,2 @@
 /* eslint-disable react-refresh/only-export-components */
-export * from './ConfirmationForm';
+export * from './Form'

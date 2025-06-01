@@ -1,10 +1,10 @@
-.chart {
+.graphics {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.chart__text {
+.graphics__text {
   display: block;
   width: 13.2rem;
 
@@ -19,13 +19,13 @@
   z-index: 1;
 }
 
-.chart__label {
+.graphics__label {
   background-color: var(--bg-light);
   border-radius: 0.472rem;
   box-shadow: 0px 2.11px 10.53px 0px #00000026;
 }
 
-.chart__label-text {
+.graphics__label-text {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 120%;
@@ -33,7 +33,7 @@
   padding: 0.566rem 0.283rem;
 }
 
-.chart__xaxis {
+.graphics__xaxis {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 120%;

@@ -1,8 +1,8 @@
-import { Chart } from "../../components/Chart";
-import { Goal } from "../../components/Goal";
-import { Logo } from "../../components/Logo";
-import { Rights } from "../../components/Rights";
-import "./WelcomePage.css";
+import { Goal } from '../../components/Goal'
+import { Graphics } from '../../components/Graphics'
+import { Logo } from '../../components/Logo'
+import { Footer } from '../../components/Footer'
+import './WelcomePage.css'
 
 export const WelcomePage = () => {
   return (
@@ -11,8 +11,7 @@ export const WelcomePage = () => {
         <Logo />
         <div className="welcome__header-content">
           <h2 className="welcome__header-title title">
-            Change your{" "}
-            <span className="welcome__header-highlighted">love life</span>
+            Change your <span className="welcome__header-highlighted">love life</span>
           </h2>
           <p className="welcome__header-text">
             with easy-to-use practical tips that you can apply in any situation
@@ -20,10 +19,10 @@ export const WelcomePage = () => {
         </div>
       </div>
       <div className="welcome__chart">
-        <Chart />
+        <Graphics />
       </div>
       <Goal />
-      <Rights />
+      <Footer />
     </div>
-  );
-};
+  )
+}

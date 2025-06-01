@@ -1,6 +1,6 @@
 import './TestPage.css'
 import { useGoal } from '../../hooks/useGoal'
-import { Back } from '../../components/Back'
+import { BackButton } from '../../components/BackButton'
 import { Logo } from '../../components/Logo'
 import { OptionsList } from '../../components/OptionsList'
 import type { Option } from '../../types/Option'
@@ -25,7 +25,7 @@ export const TestPage = () => {
             <ProgressBar />
           </div>
           <div className="test__heading-main">
-            <Back />
+            <BackButton />
             <Logo />
             <div className="quantity">
               1<span className="quantity__all">/34</span>
