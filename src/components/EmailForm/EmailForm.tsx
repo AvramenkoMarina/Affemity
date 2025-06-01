@@ -34,18 +34,18 @@ const EmailForm = () => {
     debouncedValidate.current(value)
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const trimmedEmail = email.trim()
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const trimmed = email.trim()
 
-    if (!trimmedEmail || error) {
-      alert('Будь ласка, введіть коректний email для отримання результатів.')
+    if (!trimmed || !trimmed.includes('@')) {
+      setError(true)
       return
     }
 
+    setError(false)
     navigate('/plan')
     setEmail('')
-    setError(false)
   }
 
   return (
@@ -58,7 +58,7 @@ const EmailForm = () => {
         <input
           type="email"
           placeholder="example@gmail.com"
-          className={`${styles.emailForm__input} ${error ? styles.emailForm__inputError : ''}`}
+          className={`${styles.emailForm__input} ${error ? styles['emailForm__input--error'] : ''}`}
           value={email}
           onChange={handleEmailChange}
         />

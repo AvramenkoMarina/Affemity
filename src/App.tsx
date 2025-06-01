@@ -7,7 +7,6 @@ import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import { SkillSelectionStep } from './components/SkillSelection/SkillSelection'
 
-import './styles/global.scss'
 import { SkillSelectionStepTwo } from './components/SkillSelectionStepTwo/SkillSelectionStepTwo'
 import EmailForm from './components/EmailForm/EmailForm'
 import PersonalizedPlan from './components/PersonalizedPlan/PersonalizedPlan'
