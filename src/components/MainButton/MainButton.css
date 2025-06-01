@@ -1,0 +1,27 @@
+.main-button {
+  width: 100%;
+  padding-block: 1.4rem;
+
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+  cursor: pointer;
+
+  font-family: inherit;
+  color: var(--bg-light);
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-align: center;
+
+  transition: all 0.3s linear;
+}
+
+.main-button:hover {
+  opacity: 0.9;
+}
+
+.main-button--disabled {
+  background-color: var(--bg-disabled);
+  color: var(--text-disabled);
+  cursor: default;
+}

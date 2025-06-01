@@ -1,0 +1,23 @@
+:root {
+  --accent-color: #31728d;
+  --border-color: #d2cfdf;
+  --error-color: #ea6747;
+
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-disabled: #b7b4c1;
+
+  --bg-light: #ffffff;
+  --bg-disabled: #e8e6ef;
+  --bg-modal: #faf9ff;
+
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  color: var(--text-primary);
+}
+
+@media (min-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+}

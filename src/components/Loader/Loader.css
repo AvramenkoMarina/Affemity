@@ -1,0 +1,40 @@
+.loader__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 0.4rem;
+}
+
+.loader__content-title {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+}
+
+.loader__content-percent {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 120%;
+  text-align: right;
+}
+
+.loader__progress {
+  height: 1.4rem;
+  position: relative;
+
+  background-color: var(--bg-disabled);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.loader__progress-filled {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+
+  transition: width 0.3s linear;
+}

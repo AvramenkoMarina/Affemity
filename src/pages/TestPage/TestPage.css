@@ -1,0 +1,49 @@
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 2.8rem);
+}
+
+.test__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.test__heading-progress {
+  margin-bottom: 1.2rem;
+}
+
+.test__heading-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+
+.quantity__all {
+  color: var(--text-primary);
+}
+
+.test__question {
+  text-align: center;
+}
+
+.test__question-subtitle {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+}
+
+.test__list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

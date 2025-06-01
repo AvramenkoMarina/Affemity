@@ -1,0 +1,29 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.2rem;
+}
+
+.welcome__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.welcome__header-highlighted {
+  color: var(--accent-color);
+}
+
+.welcome__header-text {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+
+.welcome__chart {
+  height: 19.7rem;
+  width: 32.7rem;
+}

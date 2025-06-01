@@ -1,0 +1,51 @@
+.option-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.6rem;
+  background-color: var(--bg-light);
+  border: 0.1rem solid var(--border-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.option-card--checked {
+  border: 0.1rem solid var(--accent-color);
+}
+
+.option-card__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option-card__content-image {
+  height: 3rem;
+  width: 3rem;
+}
+
+.option-card__content-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+
+.option-card__checkbox {
+  appearance: none;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.2rem;
+
+  cursor: pointer;
+}
+
+.option-card__checkbox:checked {
+  border: 0.1rem solid var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url('../../assets/images/check.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}

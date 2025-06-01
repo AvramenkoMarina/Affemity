@@ -1,0 +1,20 @@
+.options-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.options-list__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  flex-grow: 1;
+}
+
+.options-list__button {
+  padding: 1.6rem 0;
+  margin-top: auto;
+}

@@ -1,0 +1,14 @@
+.results {
+  height: calc(100vh - 1.7rem - 3.2rem);
+  margin-top: 1.7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.results__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

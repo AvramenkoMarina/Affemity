@@ -1,0 +1,16 @@
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--bg-disabled);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.progress-bar::after {
+  position: absolute;
+  content: "";
+  height: 0.5rem;
+  width: 20%;
+  z-index: 1;
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+}

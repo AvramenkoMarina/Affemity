@@ -1,0 +1,14 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  margin-top: 1.7rem;
+}
+
+.confirmation__content-subtitle {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+  text-align: center;
+}
