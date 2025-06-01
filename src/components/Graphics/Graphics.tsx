@@ -2,9 +2,9 @@ import './Graphics.css'
 import type { ImplicitLabelType } from 'recharts/types/component/Label'
 import { ComposedChart, Line, Bar, CartesianGrid, ResponsiveContainer, XAxis } from 'recharts'
 import type { LineDot } from 'recharts/types/cartesian/Line'
-import type { ChartData } from '../../types/ChartData'
+import { GraphicsData } from '../../types/GraphicsData'
 
-const data: ChartData[] = [
+const data: GraphicsData[] = [
   { name: 'Week 1', fill: '#A9DEF4', value: 275, lineValue: 270 },
   { name: '', fill: '#9CC9DC', value: 400, lineValue: 330 },
   { name: '', fill: '#69A8C2', value: 525, lineValue: 425 },
