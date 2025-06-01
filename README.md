@@ -2,6 +2,11 @@
 
 Educational platform dedicated to empowering women in the realm of mental health
 
+- WelcomePage is the main page of the application, containing a progress graph and a user goal selection block.
+- TestPage is a short multiple choice test.
+- ConfirmationPage contains a field for entering an email address.
+- Personalized Plan is a plan that is created automatically based on the answers to your questions.
+
 ## Demo
 
 https://bit.ly/43M5V1F
