@@ -1,39 +1,15 @@
 import './OptionsList.css'
 import { OptionCard } from '../OptionCard'
 import { MainButton } from '../MainButton'
-import { useCallback, useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useOptionsList } from '../../hooks/useOptionsList'
 import type { Option } from '../../types/Option'
 
 type Props = {
   options: Option[]
 }
 
-export const OptionsList: React.FC<Props> = (props) => {
-  const { options } = props
-
-  const [currentOptions, setCurrentOptions] = useState(options)
-
-  const navigate = useNavigate()
-
-  const handleCheck = useCallback((title: string) => {
-    setCurrentOptions((prevOptions) =>
-      prevOptions.map((option) =>
-        option.title === title ? { ...option, checked: !option.checked } : option
-      )
-    )
-  }, [])
-
-  const isAnyChecked = useMemo(
-    () => currentOptions.some((option) => option.checked),
-    [currentOptions]
-  )
-
-  const handleContinue = useCallback(() => {
-    if (isAnyChecked) {
-      navigate('/confirmation')
-    }
-  }, [isAnyChecked, navigate])
+export const OptionsList: React.FC<Props> = ({ options }) => {
+  const { currentOptions, handleCheck, handleContinue, isAnyChecked } = useOptionsList(options)
 
   return (
     <div className="options-list">
